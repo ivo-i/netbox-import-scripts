@@ -2,6 +2,9 @@
 #
 # Written by Ivelin Ivanov
 #
+### Description
+# A Nutanix VM import script for Netbox written in Python.
+#
 ### Do first:
 # 1. Extract the JSON data for all VMs and Networks and name them 
 #    clustername.json and clustername-nets.json
