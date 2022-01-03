@@ -169,6 +169,18 @@ def ApiPost (ApiUrlSub, JSON):
     
     return req.json()["id"]
 
+def ApiPatch (ApiUrlSub, JSON):
+    """ A function to PATCH a REST API, which accepts sub-URL and a JSON data variables
+    """
+    try:
+        req = requests.patch(ApiUrlBase + ApiUrlSub, headers=headers, timeout=15, verify=False, json=JSON)
+    except Exception as e:
+        print(str(e))
+        sys.exit(2)
+    
+    return req.json()["id"]
+
+
 def NetboxGetVlanIdByVlanid (Vlanid, NetboxVlanIdsJson):
     """ Print the ID of the Vlan object based on the Vlan ID in Netbox
     """
